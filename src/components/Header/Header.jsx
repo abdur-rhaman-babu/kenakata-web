@@ -8,6 +8,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
+import slider2 from '../../assets/slider2.jpg'
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
@@ -18,6 +19,7 @@ const pages = [
   { path: "/", name: "Home", id: 1 },
   { path: "/about", name: "About", id: 2 },
   { path: "/products", name: "Products", id: 3 },
+  { path: "/countries", name: "Countries", id: 4 },
 ];
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -42,7 +44,7 @@ const Header = () => {
 
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar position="fixed" className="backdrop-blur-sm opacity-95" >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <PaidIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -138,7 +140,7 @@ const Header = () => {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                  <Avatar alt="Remy Sharp" src={slider2} />
                 </IconButton>
               </Tooltip>
               <Menu
